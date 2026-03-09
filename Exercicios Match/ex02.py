@@ -12,11 +12,15 @@ Saída →  Bom
 print("Introduza a nota (0-100):")
 nota = int(input())
 
-if nota >= 90:
-    print("Excelente")
-elif nota >= 70:
-    print("Bom")
-elif nota >= 50:
-    print("Suficiente")
-else:
-    print("Insuficiente")
+
+match nota:
+    case _ if nota >= 90:
+        print("Excelente")
+    case _ if nota >= 70:
+        print("Bom")
+    case _ if nota >= 50:
+        print("Suficiente")
+    case _ if nota >= 50:
+        print("Insuficiente")
+    case _:
+        print("Introduza uma nota válida entre 0 e 100.")
