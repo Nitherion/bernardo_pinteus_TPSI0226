@@ -7,10 +7,14 @@ Exemplo:
  Maior: 8
  Menor: 2 """
  
-num1=5
-num2=2
-num3=8
  
+print ("Introduza o primeiro número:")
+num1 = int(input())
+print ("Introduza o segundo número:")
+num2 = int(input())
+print ("Introduza o terceiro número:")
+num3 = int(input())
+
 if num1>num2 and num2>num3:
     print (f"Maior: {num1}\nMenor: {num3}")
 elif num1>num3 and num3>num2:

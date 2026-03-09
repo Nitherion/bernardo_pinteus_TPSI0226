@@ -13,8 +13,10 @@ Exemplo:
  Desconto: 52,50€
  Total a pagar: 297,50€ """
  
-cliente = "João"
-compra = 350
+print ("Introduza o nome do cliente:")
+cliente = input()
+print ("Introduza o valor da compra:")
+compra = float(input())
 
 if compra <= 200:
     desconto = compra * 0.10

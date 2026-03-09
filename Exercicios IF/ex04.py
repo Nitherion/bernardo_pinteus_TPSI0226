@@ -6,8 +6,10 @@ Exemplo:
  Saída esperada:
  Cheque descontado, saldo: 200 """
  
-saldo = 500
-cheque = 300
+print ("Introduza o saldo inicial:")
+saldo = int(input())
+print ("Introduza o valor do cheque:")
+cheque = int(input())
 
 if cheque <= saldo:
     saldo -= cheque

@@ -6,10 +6,15 @@ Exemplo:
  Saída esperada:
  Pares: 6
  Ímpares: 4 """
- 
-num = [2, 3, 5, 6, 8, 9, 10, 12, 14, 15]
+
+
+num = []
 pares = 0
 ímpares = 0
+
+for i in range(10):
+    num = int(input(f"Introduza o {i+1}o número: "))
+    num.append(num)
 
 for n in num:
     if n % 2 == 0:

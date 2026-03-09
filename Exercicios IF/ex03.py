@@ -7,8 +7,10 @@ Exemplo:
  Crescente: 2, 7
  Decrescente: 7, 2 """
  
-num1=7
-num2=2
+print ("Introduza o primeiro número:")
+num1 = int(input())
+print ("Introduza o segundo número:")
+num2 = int(input())
 
 if num1 < num2:
     print(f"Crescente: {num1}, {num2}")

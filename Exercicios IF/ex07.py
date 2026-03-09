@@ -8,9 +8,12 @@ Exemplo:
  Aprovado
  """
  
-nota1=7
-nota2=6
-nota3=9
+print ("Introduza a primeira nota:")
+nota1 = int(input())
+print ("Introduza a segunda nota:")
+nota2 = int(input())
+print ("Introduza a terceira nota:")
+nota3 = int(input())
  
 media = (nota1*0.2 + nota2*0.3 + nota3*0.5)
 print(f"Média: {media:.1f}")
