@@ -11,6 +11,7 @@ Saída esperada: 1 hora, 1 minuto e 5 segundos.
 """
 print ("Introduza o tempo em segundos:")
 tempo = int(input())
+
 if(tempo > 0):
     horas=int(tempo/3600)
     resto = tempo%3600
@@ -18,4 +19,4 @@ if(tempo > 0):
     segundos = resto%60
     print(f"{tempo} segundos = {horas}h{minutos}m{segundos}s")
 else:
-    print("Tempo inválido. Por favor, insira um número positivo.")
+    print("Tempo inválido. Ìnsira um valor positivo.")
