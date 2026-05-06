@@ -14,31 +14,38 @@ Miguel PriMo
 Luis AnseLmo
 Guilherme ramos
 '''
-#valido = True
+valido = True
 nome_completo = input("Introduza o seu nome completo: ")
-for i in range(len(nome_completo)):
-    
-    #print(i, ord(nome_completo[i]))
 
+#verifica input vazio
+if nome_completo.strip() == "":
+    valido = False   
     
-    #se o cada caracte for:
-    #              espaços          ou                  letras mauisculas                           ou                      letras minusculas
-    if (ord(nome_completo[i]) == 32 or ord(nome_completo[i]) >= 65 and ord(nome_completo[i]) <= 90) or ord(nome_completo[i]) >= 97 and ord(nome_completo[i]) <= 122:
-        #print("Nome só contém letras e espaços")
-        valido = True
-        #se a primeira letra for um espaço e a letra seguinte uma maíuscula
-        if ord(nome_completo[i]) == 32 and ord(nome_completo[i+1]) >= 65 and ord(nome_completo[i+1] <= 90):
-            #print("a posiçao 0 é um espaço e a letra seguinte é maiúscula")
-            valido = True
-      #  else:
-        #    valido = False
-    #se algum caracter não for espaço, letra maiúscula nem minuscula    
-    else:
-        valido = False
+#65 = A, 90 = Z, a = 97, 122 = z, espaço = 32
 
+#verifica se o primeiro caracter (não) é letra maiúscula nem um espaço
+elif (ord(nome_completo[0]) < 65 or ord(nome_completo[0]) > 90) and ord(nome_completo[0]) != 32:
+    valido = False
+
+else: 
+    for i in range(1, len(nome_completo)):
+        #
+        #se o caracter nao for uma letra MAIÚSCULA                      e           nao for letra minúscula e não for espaço
+        if (ord(nome_completo[i]) < 65 or ord(nome_completo[i]) > 90 ) and (ord(nome_completo[i]) < 97 or ord(nome_completo[i]) > 122) and ord(nome_completo[i]) != 32:
+            valido = False
+            break
+        
+        #se o caracter anterior nao for um espaço    E          for letra MAIÚSCULA
+        if ord(nome_completo[i-1]) != 32 and (ord(nome_completo[i]) >= 65 and ord(nome_completo[i]) <= 90):
+            valido = False
+            break
+        
+        #se o caracter anterior for um espaço E nao for letra MAIÚSCULA
+        if ord(nome_completo[i-1]) == 32 and (ord(nome_completo[i]) < 65 or ord(nome_completo[i]) > 90) and ord(nome_completo[i]) != 32: 
+            valido = False
+            break
 
 if valido:
     print("Nome válido!")
 else:
     print("Nome inválido: contém caracteres não permitidos.")
-    
